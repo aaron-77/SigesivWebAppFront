@@ -1,1 +1,136 @@
-<p>detalle-poliza works!</p>
+<div class="divTitulo">
+    <h1>Detalle poliza</h1>
+    <div id="separador2"></div>
+</div>
+
+<div class="containerClass">
+    <h4> Datos del Asegurado</h4>
+    
+        <div class="divSeccion">
+            <div class="divSeparacionFormal">
+                <p>Nombre completo del asegurado:</p>
+                <label>nombreCompleto</label>
+            </div>
+        </div>
+        <div class="divSeccion">
+            <div class="divSeparacionFormal">
+                <p>Fecha de nacimiento:</p>
+                <label>@fechaDeNacimiento</label>
+            </div>
+        </div>
+        <div class="divSeccion">
+            <div class="divSeparacionFormal">
+                <p>Numero de licencia:</p>
+                <label>numeroDeLicencia</label>
+            </div>
+        </div>
+        <div class="divSeccion">
+            <div class="divSeparacionFormal">
+                <p>Numero de Celular:</p>
+                <label>celular</label>
+            </div>
+        </div>
+
+    <div id="separador2"></div>
+    <h4>Datos de la Poliza</h4>
+
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Numero de Poliza:</p>
+            <label>numeroDePoliza</label>
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Tipo de Cobertura:</p>
+            <label>tipoDeCobertura</label>
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Plazo de Cobertura(años):</p>
+            <label>lapsoDeCobertura</label>
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Fecha de Inicio de Seguro:</p>
+            <label>fechaDeInicio</label>
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Fecha Expiracion:</p>
+            <label>fechaDeExpiracion</label>
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Casos de cobertura de la poliza:</p>
+            <label>casosDeCobertura</label>
+            <div class="tableStyle2">
+                <table>
+                    <tr>
+                        <th>nombre del caso</th>
+                        <th>condiciones </th>
+                    </tr>
+                
+                <tr class=" tableRowStyle">
+                    <td>nombreDelCaso </td>
+                    <td>condiciones</td>
+
+                </tr>
+                
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div id="separador2"></div>
+    <h4>Datos de Vehiculo Asegurado</h4>
+
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Marca de Vehiculo:</p>
+            <label>marca</label>
+             
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Modelo:</p>
+            <label>modelo</label>
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Num de Placa:</p>
+            <label>numeroDePlacas</label>
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Año:</p>
+            <label>año</label>
+        </div>
+    </div>
+    <div class="divSeccion">
+        <div class="divSeparacionFormal">
+            <p>Color:</p>
+            <label>color</label>
+        </div>
+    </div>
+
+    <br />
+    <p>seleccione otra poliza para ver su detalle</p>
+</div>
+
+<div class="divBotonesAccion">
+    
+    <div class="divbtnIzquierda">
+        <button style=" background-color:forestgreen; padding:6px;border-radius:10px ; width:150px;color:white;text-align:center"> @Html.ActionLink("Regresar","obtenerListaPolizas","Polizas",new {idConductor=37})</button>
+    </div>
+
+</div>
