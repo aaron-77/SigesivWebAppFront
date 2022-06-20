@@ -1,0 +1,78 @@
+
+<form (submit)="crearReporte(formReporte,reporte)" name="form1" style="text-align: center; display: flex; align-items: center;justify-content: center; flex-direction: column; width: 100%; gap:5px;" #formReporte="ngForm">
+    <button style=" background-color:forestgreen; padding:6px;border-radius:10px ; width:100px;color:white">@Html.ActionLink("Regresar","ubicacionReporte","Reportes") </button>
+
+    <img class="imageMenu" src="https://th.bing.com/th/id/OIP.xnZHv2UfVzclmXZjyOGuxgHaHa?pid=ImgDet&rs=1" />
+    <div class="divTitulo">
+        <h1>Generar Reporte</h1>
+        <div id="separador"></div>
+        <h3>ingrese los datos que se le solicitan:</h3>
+        <br />
+    </div>
+    <div class="divSeccion">
+        
+        <div class="divSeccion">
+            <h5>a continuacion se presenta la tabla de vehiculos asegurados. SELECIONE aquel con el que haya ocurrido el siniestro:</h5>
+            <div class="tableStyle2">            
+        <div class="tableStyle2">
+                <table>
+                    <thead>
+                        <tr class="tableRowStyle">
+                            <th> Placas:</th>
+                            <th>Modelo:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class=" tableRowStyle">
+                            <td>Placas ejemplo</td>
+                            <td>Modelo ejemplo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Datos de Vehiculo:</h3>
+            <div id="separador2"></div>
+            <div class="divSeccion">
+                <div class="divSeparacionFormal">
+                    <p>No.Placas:</p>
+                    <input class="inputData" type="text" />
+                </div>
+            </div>
+            <div class="divSeccion">
+                <div class="divSeparacionFormal">
+                    <p>Modelo de Vehiculo:</p>
+                    <input class="inputData" type="text" />
+                </div>
+            </div>
+            <h3>Datos de los involucrados</h3>
+            <div id="separador2"></div>
+            <div class="divSeccion">
+                <div class="divSeparacionFormal">
+                   <p>Marca:</p>
+                   <input class="inputData" type="text" />
+                </div>
+            </div>
+            <div class="divSeccion">
+                <div class="divSeparacionFormal">
+                     <p>Modelo de Vehiculo:</p>
+                     <input class="inputData" type="text" />
+                </div>
+            </div>
+             <div class="divSeccion">
+                <div class="divSeparacionFormal">
+                   <p>No.Placa</p>
+                   <input class="inputData" type="text" />
+                </div>
+            </div>
+            <div class="divSeccion">
+                <div class="divSeparacionFormal">
+                     <p>Color:</p>
+                     <input class="inputData" type="text" />
+                </div>
+            </div>
+        </div>
+            <h4>Una vez lleno su reporte seleccione el boton para enviar el Reporte</h4>
+            <button class="buttonClass"> Generar Reporte</button>
+        </div>
+    </div>
+</form>

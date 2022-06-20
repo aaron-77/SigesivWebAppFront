@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+    <button class="botonRegresar" > Regresar</button>
+
+    <img class="imageMenu" src="https://th.bing.com/th/id/OIP.xnZHv2UfVzclmXZjyOGuxgHaHa?pid=ImgDet&rs=1" />
+    <div class="divTitulo">
+        <h1>Comprar Poliza</h1>
+        <div id="separador"></div>
+        <h3>ingrese los datos que se le solicitan:</h3>
+        <br />
+    </div>
+    <form (submit)="comprarPoliza(formPoliza,polizaCompleta)" name="form1" style="text-align: center; display: flex; align-items: center;justify-content: center; flex-direction: column; width: 100%; gap:5px;" #formPoliza="ngForm">
+        <div id="separador2"></div>
+        <h4> Datos del Asegurado</h4>
+        
+        <input [(ngModel)]="polizaCompleta.asegurado.nombreCompleto" name="nombreCompleto" class="inputData3" type="text" id="i1" name="i1" placeholder="Nombre completo del asegurado:" #nombreCompleto="ngModel" required nombreCompleto>
+        <input [(ngModel)]="polizaCompleta.asegurado.fechaDeNacimiento" name="fechaDeNacimiento" class="inputData3" type="date" id="i2" name="i2" placeholder="Fecha de nacimiento"#fechaDeNacimiento="ngModel" required  fechaDeNacimiento>
+        <input [(ngModel)]="polizaCompleta.asegurado.numeroDeLicencia" name="numeroDeLicencia" class="inputData3" type="text" id="i3" name="i3" placeholder="Numero de Licencia:" #numeroDeLicencia="ngModel" required numeroDeLicencia>
+        <input [(ngModel)]="polizaCompleta.asegurado.celular" name="celular" class="inputData3 "type="text" id="i4" name="i4" placeholder="Numero de telefono:" #celular="ngModel" required celular>
+         
+        <div id="separador2"></div>
+        <h4>Datos de la Poliza</h4>
+        <table class="tabla">
+            <thead>
+                <th class="encabezado">Tipos de poliza disponibles</th>
+            </thead>
+            <tbody>
+                <tr class="row" *ngFor="let tipoDePoliza of tiposDeCobertura.catalogoTiposDeCobertura" (click)="obtenerTipoDePoliza(tipoDePoliza)">{{tipoDePoliza.tipoDeCobertura}}</tr>
+            </tbody>
+        </table>        
+        <label for="coberturas">Plazos de Cobertura</label>
+        <input [ngModel]="lapsoDeCoberturaSeleccionado" name="plazoCobertura" type="text"  id="plazoCobertura" value="{{lapsoDeCoberturaSeleccionado}}" disabled /> 
+        <label>fechaInicio:</label>
+        <input [(ngModel)]="polizaCompleta.polizadeseguro.fechaDeInicio" class="inputData3" type="date" id="fechaInicio" name="fechaInicio" #fechaInicio="ngModel"disabled required/>
+        <label>fechaFin:</label>
+        <input [(ngModel)]="polizaCompleta.polizadeseguro.fechaDeExpiracion" class="inputData3" type="date" id="fechaFin" name="fechaFin" #fechaDeExpiracion="ngModel" disabled required />
+        <label for="coberturas2">Casos de cobertura de la Poliza:</label>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        nombreDelCaso
+                    </th>
+                    <th>
+                        condiciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let casoDeCobertura of cobeturasDePolizaSeleccionada">
+                    <th>{{casoDeCobertura.nombreDelCaso}}</th>
+                    <th>{{casoDeCobertura.condiciones}}</th>
+                </tr>
+            </tbody>
+        </table>
+        <label for="costoTotal">Costo total</label>
+        <input [(ngModel)]="polizaCompleta.polizadeseguro.costoTotal" name="costoTotal" class="inputData3" type="text" id="fechaFin" name="costoTotal" value="{{tipoDePolizaSeleccionada.costo}}" disabled required  />
+        <div id="separador2"></div>
+        <h4>Datos de Vehiculo Asegurado</h4>
+        <label for="marcaVehiculo">Marca de Vehiculo:</label>
+        <table class="tabla">
+            <thead>
+                <th class="encabezado">Marca de Vehiculo:</th>
+            </thead>
+            <tbody>
+                <tr class="row" *ngFor="let marca of tiposDeCobertura.catalogoMarcasDeAuto" (click)="obtenerMarcaSeleccionada(marca)">{{marca.marca}}</tr>
+            </tbody>
+        </table>
+        <label for="modelo">Modelo:</label>
+        <table class="tabla">
+            <thead>
+                <th class="encabezado">Modelos  de auto</th>
+            </thead>
+            <tbody>
+                <tr class="row" *ngFor="let modelo of modelosDeMarcaSeleccionada" (click)="obtenerModeloSeleccionado(modelo)">{{modelo.modelo}}</tr>
+            </tbody>
+        </table>
+        
+        <input [(ngModel)]="polizaCompleta.vehiculosasegurado.numeroDePlacas" class="inputData3" type="text" id="numeroPlaca" name="numeroPlaca" placeholder="Numero de Placa:" required>
+        <input [(ngModel)]="polizaCompleta.vehiculosasegurado.numeroDeSerie" class=" inputData3" type="text" id="numSerie" name="numSerie" placeholder="numero de serie:"required>
+        <input [(ngModel)]="polizaCompleta.vehiculosasegurado.ano" class=" inputData3" type="number" id="anio" name="anio" placeholder="Año:"required>
+        <input [(ngModel)]="polizaCompleta.vehiculosasegurado.color" class="inputData3" type="text" id="color" name="color" placeholder="Color de Vehiculo:" required>
+        <div id="separador2"></div>
+        <h4>Datos del pago:</h4>
+        <input [(ngModel)]="polizaCompleta.pago.numDeTarjeta" class="inputData3" type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Numero de Tarjeta:"required>
+        <button class="buttonClass" type="submit">Comprar Poliza</button>
+    </form>
+
