@@ -35,7 +35,7 @@ const routes: Routes = [
     component:AsignarAjustadorComponent
   },
   {
-    path:"login",
+    path:"",
     component:LoginComponent
   },
 ];

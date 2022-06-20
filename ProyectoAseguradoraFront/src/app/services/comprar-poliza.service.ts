@@ -7,8 +7,8 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 
 
 export class ComprarPolizaService {
-  urlCompraDePoliza = "https://localhost:44316/Polizas/comprarPoliza";
-  urlObtenerTiposDePolizasYMarcas ="https://localhost:44316/Polizas/comprarPoliza";
+  urlCompraDePoliza = "https://localhost:5001/Polizas/comprarPoliza";
+  urlObtenerTiposDePolizasYMarcas ="https://localhost:5001/Polizas/comprarPoliza";
  
   constructor(private http: HttpClient) { 
 

@@ -14,15 +14,15 @@
         <h3>Ingrese los datos solicitados:</h3>
         <div class="divTitulo">
             <p>Nombre de Usuario:</p>
-            <input type="text" />
+            <input [(ngModel)]="username" type="text" />
         </div>
         <div class="divTitulo">
             <p>Contraseña:</p>
-            <input type="password" />
+            <input [(ngModel)]="password" type="password" />
         </div>
         <br/>
         <div class="containerClass">
-            <button class="buttonClass">
+            <button class="buttonClass" (click)="login()">
             ingresar 
          </button>
 

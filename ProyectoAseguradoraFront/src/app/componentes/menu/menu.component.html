@@ -9,13 +9,13 @@
     <div class="containerClass" style="text-align:center; display:flex; align-items:center; justify-content:center;flex-direction:column;width:100%;gap:20px;">
         <h3>seleccione la opcion que desee:</h3>
         
-        <button style="background-color: dodgerblue;padding: 6px;border-radius: 10px;width: 150px;color: white; text-align:center;"> Generar Reporte</button>
+        <button *ngIf="conductor" style="background-color: dodgerblue;padding: 6px;border-radius: 10px;width: 150px;color: white; text-align:center;"> Generar Reporte</button>
         
-        <button style="background-color: dodgerblue;padding: 6px;border-radius: 10px;width: 150px;color: white; text-align:center;"> Consultar Polizas</button>
+        <button *ngIf="conductor" style="background-color: dodgerblue;padding: 6px;border-radius: 10px;width: 150px;color: white; text-align:center;"> Consultar Polizas</button>
         
-        <button style="background-color: dodgerblue;padding: 6px;border-radius: 10px;width: 150px;color: white; text-align:center;"> Comprar Poliza</button>
+        <button *ngIf="conductor" style="background-color: dodgerblue;padding: 6px;border-radius: 10px;width: 150px;color: white; text-align:center;"> Comprar Poliza</button>
 
-        <button style="background-color: dodgerblue;padding: 6px;border-radius: 10px;width: 150px;color: white; text-align:center;"> Menu Ajustadores</button>
+        <button *ngIf="ejecutivo" style="background-color: dodgerblue;padding: 6px;border-radius: 10px;width: 150px;color: white; text-align:center;"> Menu Ajustadores</button>
 
         <button style=" background-color:forestgreen; padding:6px;border-radius:10px ; width:150px;color:white;text-align:center"> salir</button>
 
