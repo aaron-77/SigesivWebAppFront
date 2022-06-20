@@ -8,6 +8,9 @@ import { MenuComponent } from './componentes/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { CrearReporteComponent } from './componentes/crear-reporte/crear-reporte.component';
 import { CrearReporteMapComponent } from './componentes/crear-reporte-map/crear-reporte-map.component';
+import { AsignarAjustadorComponent } from './componentes/asignar-ajustador/asignar-ajustador.component';
+import { DetallePolizaComponent } from './componentes/detalle-poliza/detalle-poliza.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { CrearReporteMapComponent } from './componentes/crear-reporte-map/crear-
     MenuComponent,
     CrearReporteComponent,
     CrearReporteMapComponent,
+    AsignarAjustadorComponent,
+    DetallePolizaComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
