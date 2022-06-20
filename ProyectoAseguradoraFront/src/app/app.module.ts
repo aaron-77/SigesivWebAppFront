@@ -11,6 +11,7 @@ import { CrearReporteMapComponent } from './componentes/crear-reporte-map/crear-
 import { AsignarAjustadorComponent } from './componentes/asignar-ajustador/asignar-ajustador.component';
 import { DetallePolizaComponent } from './componentes/detalle-poliza/detalle-poliza.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { ListadoPolizasComponent } from './componentes/listado-polizas/listado-polizas.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoginComponent } from './componentes/login/login.component';
     AsignarAjustadorComponent,
     DetallePolizaComponent,
     LoginComponent,
+    ListadoPolizasComponent,
   ],
   imports: [
     BrowserModule,
