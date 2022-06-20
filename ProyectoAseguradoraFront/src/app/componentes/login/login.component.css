@@ -1,3 +1,15 @@
+
+.buttonFeo{
+    background:none;
+    text-decoration: underline;
+    color:darkblue;
+    border: none;
+}
+.divVertical{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
 .buttonClass {
     background-color: dodgerblue;
     padding: 6px;
@@ -150,10 +162,11 @@ table {
     background-color:#353535;
 }
 .imageExtra{
-   
+   position:absolute;
     height:140px;
     width:140px;
-    left:70px;
+    left:200px;
+    bottom: 100px;
    
 }
 .divHorizontal {
@@ -163,20 +176,20 @@ table {
     gap: 20px;
 }
 .imageRightTop {
-    position: fixed;
+    position: absolute;
     height: 120px;
     right: 160px;
     top:60px;
     
 }
 .imageLeftTop {
-    position: fixed;
+    position: absolute;
     height: 150px;
     left: 185px;
     top: 60px;
 }
 .imageRightBottom {
-    position: fixed;
+    position: absolute;
     height: 120px;
     right: 160px;
     bottom: 120px;
@@ -199,4 +212,22 @@ table {
     flex-direction: row;
     width: 65%;
     gap: 20px;
+}
+@media screen and (max-width:600px) {
+    .imageExtra{
+        display: none;
+    }
+    .imageLeftTop{
+        display: none;
+    }
+    .imageRightTop{
+        display: none;
+    }
+    .imageRightBottom{
+        display: none;
+    }
+    #barraderecha{
+        width: 20px;
+        
+    }
 }

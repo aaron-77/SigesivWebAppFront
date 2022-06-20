@@ -6,6 +6,9 @@ import { MenuComponent } from './componentes/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CrearReporteComponent } from './componentes/crear-reporte/crear-reporte.component';
 import { CrearReporteMapComponent } from './componentes/crear-reporte-map/crear-reporte-map.component';
+import { ListadoPolizasComponent } from './componentes/listado-polizas/listado-polizas.component';
+import { AsignarAjustadorComponent } from './componentes/asignar-ajustador/asignar-ajustador.component';
+import { LoginComponent } from './componentes/login/login.component';
 const routes: Routes = [
   {
     path:'menu',
@@ -22,7 +25,19 @@ const routes: Routes = [
   ,{
     path:"crearReporte",
     component:CrearReporteComponent
-  }
+  },
+  {
+    path:"listadoPolizas",
+    component:ListadoPolizasComponent
+  },
+  {
+    path:"asignarAjustador",
+    component:AsignarAjustadorComponent
+  },
+  {
+    path:"login",
+    component:LoginComponent
+  },
 ];
 
 @NgModule({

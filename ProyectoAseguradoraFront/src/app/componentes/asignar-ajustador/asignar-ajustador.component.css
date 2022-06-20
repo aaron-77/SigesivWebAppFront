@@ -200,3 +200,8 @@ table {
     width: 65%;
     gap: 20px;
 }
+@media screen and (max-width:600px) {
+    table{
+        font-size:x-small;
+    }
+}
